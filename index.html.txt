@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>صفحة تلوين</title>
+  <style>
+    body { text-align: center; font-family: Arial; background: #f0f0f0; }
+    canvas { border: 1px solid #ccc; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h2>قم بتلوين الصورة</h2>
+  <canvas id="canvas" width="600" height="800"></canvas>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.6.0/fabric.min.js"></script>
+  <script>
+    const canvas = new fabric.Canvas('canvas');
+    fabric.Image.fromURL(‘https://cdn.cmsfly.com/68173dc9903f7400200a9a59/images/2F1CF154366E410E97D67607897CC59D-ayAB1.png’{
+      img.selectable = false;
+      canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas), {
+        scaleX: canvas.width / img.width,
+        scaleY: canvas.height / img.height
+      });
+    });
+    canvas.isDrawingMode = true;
+    canvas.freeDrawingBrush.width = 5;
+    canvas.freeDrawingBrush.color = "#000000";
+  </script>
+</body>
+</html>
